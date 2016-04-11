@@ -1,0 +1,33 @@
+{
+  "name": "bootsrap-grid",
+  "homepage": "https://github.com/wintersummermint/bootstrap-grid",
+  "description": "A lightweight Bootstrap's grid and responsive utility classes for free styling.",
+  "main": "bootstrap-grid.css",
+  "moduleType": [],
+  "keywords": [
+    "bootstrap",
+    "grid",
+    "only"
+  ],
+  "authors": [
+    "nixon galario"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "d4a2a56557",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d4a2a565575593b6b5db8b128cd95df617354887"
+  },
+  "_source": "https://github.com/wintersummermint/bootstrap-grid.git",
+  "_target": "*",
+  "_originalSource": "bootstrap-grids",
+  "_direct": true
+}

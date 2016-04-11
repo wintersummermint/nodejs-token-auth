@@ -1,7 +1,28 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+		script(src='/javascripts/script.js')
+	body
+		aside
+			a
+				svg#nav-btn(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 512 512', enable-background='new 0 0 512 512', xml:space='preserve')
+					path#list-view-icon(d='M462,108.857H50V50h412V108.857z M462,167.714H50v58.857h412V167.714z M462,285.429H50v58.857h412\
+					V285.429z M462,403.143H50V462h412V403.143z')
+			.sidenav 
+				h1 Node-Auth
+				nav
+					ul
+						li(class=(title==='members' ? 'active' : ''))
+							a(href='/members') Members
+						li(class=(title==='register' ? 'active' : ''))
+							a(href='/register') Register
+						li(class=(title==='login' ? 'active' : ''))
+							a(href='/login') Login
+		header
+			h2 #{title}
+		article
+			block content
