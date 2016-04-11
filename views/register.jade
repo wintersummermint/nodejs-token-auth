@@ -1,4 +1,15 @@
 extends layout
 
 block content
-	h2 register
+	.Registro
+		form(method='post', action='')
+			span.fontawesome-user
+			input(type='text', required='', name='fullName', placeholder='Full name', autocomplete='off')
+			span.fontawesome-envelope-alt
+			input#email(type='text', required='', name='email', placeholder='Email', autocomplete='off')
+			span.fontawesome-lock
+			input#password(type='password', name='password', required='', placeholder='Password', autocomplete='off')
+			input#password(type='password', name='password2', required='', placeholder='Password again', autocomplete='off')
+			label Profile Picture
+				input#profileImage(type='file', name='profileImage', required='', placeholder='Password again', autocomplete='off')
+			input(type='submit', value='Register', title='register')

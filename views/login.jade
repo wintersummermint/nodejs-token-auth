@@ -1,4 +1,17 @@
 extends layout
 
 block content
-	h2 login
+	body.align
+		.site__container
+			.grid__container
+				form.form.form--login(action='/login', method='post')
+					.form__field
+						input#login__username.form__input(type='text', name='username', placeholder='Username', required='')
+					.form__field
+						input#login__password.form__input(type='password',name='password', placeholder='Password', required='')
+					.form__field
+						input(type='submit', value='Sign In')
+				p.text--center
+						| Not a member? 
+						a(href='#') Sign up now
+					span.fontawesome-arrow-right
