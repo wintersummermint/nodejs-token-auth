@@ -28,7 +28,7 @@ app.set('view engine', 'jade');
 
 //file uploads
 // app.use(multer({dest :'./upload'}));
-var upload = multer({ dest: 'uploads/' });
+// var upload = multer({ dest: 'uploads/' });
 
 
 // uncomment after placing your favicon in /public

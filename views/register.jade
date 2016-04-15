@@ -11,5 +11,8 @@ block content
 			input#password(type='password', name='password', required='', placeholder='Password', autocomplete='off')
 			input#password(type='password', name='password2', required='', placeholder='Password again', autocomplete='off')
 			label Profile Picture
-				input#profileImage(type='file', name='profileImage', required='', placeholder='Password again', autocomplete='off')
+				input#profileImage(type='file', name='profileImage', placeholder='Password again')
 			input(type='submit', value='Register', title='register')
+	if errors
+		each error, i in errors
+			well #{error.msg}
