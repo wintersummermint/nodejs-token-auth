@@ -18,10 +18,13 @@ html
 					ul
 						li(class=(title==='members' ? 'active' : ''))
 							a(href='/members') Members
-						li(class=(title==='register' ? 'active' : ''))
-							a(href='/register') Register
-						li(class=(title==='login' ? 'active' : ''))
-							a(href='/login') Login
+						if !user
+							li(class=(title==='register' ? 'active' : ''))
+								a(href='/register') Register
+							li(class=(title==='login' ? 'active' : ''))
+								a(href='/login') Login
+						li(class=(title==='logout' ? 'active' : ''))
+							a(href='/logout') Logout
 		header
 			h2 #{title}
 		article

@@ -67,8 +67,8 @@ router.post('/', upload.single('profileImage'), function(req,res,next){
 			}
 
 			req.flash('redirecting now');
-			res.location('/');
-			res.redirect('/');
+			res.location('/success');
+			res.redirect('/success');
 		});
 		
 
