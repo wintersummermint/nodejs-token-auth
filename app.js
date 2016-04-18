@@ -14,11 +14,13 @@ var mongoose = require('mongoose');
 var expressValidator = require('express-validator');
 var db = mongoose.connection;
 
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var register = require('./routes/register');
 var login = require('./routes/login');
 var members = require('./routes/members');
+var success = require('./routes/success');
 
 var app = express();
 
@@ -73,12 +75,21 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use('*', function(req, res, next) {
+  res.locals.user = req.user || null;
+  console.log(res.locals.user);
+  next();
+});
+
 //router 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/register', register);
 app.use('/members', members);
 app.use('/login', login);
+app.use('/success', success);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

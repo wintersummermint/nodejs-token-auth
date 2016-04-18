@@ -31,3 +31,19 @@ module.exports.createUser  = function(newUser, callback) {
 		newUser.save(callback);
 	});
 }
+module.exports.findId = function(id,callback){
+	var query = {id: id};
+	User.findById(id,callback);
+}
+
+module.exports.findUser = function(email,callback){
+	var query = {email: email};
+	User.findOne(query,callback);
+}
+
+module.exports.comparePassword  = function(password,hash, callback){
+	bcrypt.compare(password,hash, function(err,isMatch){
+		if (err) {return callback(err)};
+		callback(null, isMatch);
+	});
+}
